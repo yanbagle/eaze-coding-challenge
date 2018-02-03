@@ -1,0 +1,12 @@
+h1 {
+  margin-left: 1em;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gif {
+  margin: 1em;
+}
