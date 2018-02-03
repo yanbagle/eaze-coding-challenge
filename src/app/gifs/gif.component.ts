@@ -3,11 +3,11 @@ import {GiphyApiService} from '../service/giphy-api.service';
 import {Gif} from '../models/Gif';
 
 @Component({
-  selector: 'app-trendy-gifs',
-  templateUrl: './trendy-gifs.component.html',
-  styleUrls: ['./trendy-gifs.component.css']
+  selector: 'app-gifs',
+  templateUrl: './gif.component.html',
+  styleUrls: ['./gif.component.css']
 })
-export class TrendyGifsComponent implements OnInit {
+export class GifsComponent implements OnInit {
 
   // gifs to be passed down to display-gifs component
   public gifs: Gif[] = [];

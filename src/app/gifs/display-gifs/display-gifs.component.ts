@@ -10,7 +10,7 @@ import {Gif} from '../../models/Gif';
 })
 export class DisplayGifsComponent implements OnInit {
 
-  // gifs comes from trendy-gifs component
+  // gifs comes from gifs component
   @Input() gifs: Gif[];
 
   constructor(public sanitizer: DomSanitizer) { }

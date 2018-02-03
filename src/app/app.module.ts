@@ -3,17 +3,19 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { DisplayGifsComponent } from './trendy-gifs/display-gifs/display-gifs.component';
-import { TrendyGifsComponent } from './trendy-gifs/trendy-gifs.component';
+import { DisplayGifsComponent } from './gifs/display-gifs/display-gifs.component';
+import { GifsComponent } from './gifs/gif.component';
 import {HttpClientModule} from '@angular/common/http';
 import {GiphyApiService} from './service/giphy-api.service';
+import { SearchGifsComponent } from './gifs/search-gifs/search-gifs.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayGifsComponent,
-    TrendyGifsComponent
+    GifsComponent,
+    SearchGifsComponent
   ],
   imports: [
     BrowserModule,

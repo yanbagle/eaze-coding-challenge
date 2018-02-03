@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TrendyGifsComponent } from './trendy-gifs.component';
+import { SearchGifsComponent } from './search-gifs.component';
 
-describe('TrendyGifsComponent', () => {
-  let component: TrendyGifsComponent;
-  let fixture: ComponentFixture<TrendyGifsComponent>;
+describe('SearchGifsComponent', () => {
+  let component: SearchGifsComponent;
+  let fixture: ComponentFixture<SearchGifsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrendyGifsComponent ]
+      declarations: [ SearchGifsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TrendyGifsComponent);
+    fixture = TestBed.createComponent(SearchGifsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
