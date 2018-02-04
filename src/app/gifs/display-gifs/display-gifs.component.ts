@@ -12,16 +12,21 @@ import {Gif} from '../../models/Gif';
   templateUrl: './display-gifs.component.html',
   styleUrls: ['./display-gifs.component.css']
 })
-export class DisplayGifsComponent implements OnInit, OnChanges {
+export class DisplayGifsComponent implements OnInit {
 
   // gifs comes from gifs component
   @Input() gifs: Gif[];
 
-  public loaded = true;
+  public loaded = false;
 
   constructor(public sanitizer: DomSanitizer) { }
 
+  // unable to use (load) functionality to detect when iFrame is done loading
+  // using setTimeout in the mean time
   ngOnInit() {
+    setTimeout(() => {
+      this.loaded = true;
+    }, 15000);
   }
 
   // detecting when user is at bottom of page
@@ -32,13 +37,5 @@ export class DisplayGifsComponent implements OnInit, OnChanges {
   //     // emit back to smart component, and do service call to get another set of gifs
   //   }
   // }
-
-  // unable to use (load) functionality to detect when iFrame is done loading
-  // using ngOnChanges in the mean time
-  public ngOnChanges (changes: SimpleChanges) {
-    if (changes['gifs'] && this.gifs.length > 0) {
-      this.loaded = true;
-    }
-  }
 
 }

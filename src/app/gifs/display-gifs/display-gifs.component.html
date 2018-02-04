@@ -1,6 +1,8 @@
 <div class="container">
   <div class="gif" *ngFor="let gif of gifs">
-    <i [ngClass]="{'fas fa-spinner fa-spin': !loaded}"></i>
+    <button *ngIf="!loaded" class="btn btn-md btn-danger">
+      <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...
+    </button>
     <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(gif.embed_url)" width="480" height="260" frameBorder="0" allowFullScreen></iframe>
   </div>
 </div>
