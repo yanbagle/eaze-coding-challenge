@@ -1,8 +1,8 @@
 <h1>Search Giphy</h1>
 <app-search-gifs
-  (keywordOutput)="searchGif($event)">
+  (keywordOutput)="searchGif($event)"
+  (loadMoreGifs)="loadMoreGifs()">
 </app-search-gifs>
 <app-display-gifs
-  [gifs]="gifs"
-  (loadMoreGifs)="loadMoreGifs()">
+  [gifs]="gifs">
 </app-display-gifs>

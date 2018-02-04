@@ -13,6 +13,7 @@ export class GifsComponent implements OnInit {
   public gifs: Gif[] = [];
   public searchingGif = false;
   public keyword = '';
+  private offset = 0;
 
   constructor(private giphyApiService: GiphyApiService) { }
 
@@ -22,7 +23,7 @@ export class GifsComponent implements OnInit {
   }
 
   public getTrendyGifs () {
-    this.giphyApiService.getTrendyGifs(0).subscribe((res) => {
+    this.giphyApiService.getTrendyGifs().subscribe((res) => {
       this.gifs = res.data;
     }, (error) => {
       console.log(error);
@@ -30,10 +31,11 @@ export class GifsComponent implements OnInit {
   }
 
   public searchGif (keyword) {
-    this.giphyApiService.getGifs(keyword, 0).subscribe((res) => {
+    this.giphyApiService.getGifs(keyword, this.offset).subscribe((res) => {
       this.gifs = res.data;
       this.searchingGif = true;
       this.keyword = keyword;
+      this.offset += 25;
     }, (error) => {
       console.log(error);
     });
