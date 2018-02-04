@@ -7,7 +7,7 @@ import {GifDTO} from '../models/GifDTO';
 @Injectable()
 export class GiphyApiService {
 
-  private url = 'http://api.giphy.com/';
+  private url = 'https://api.giphy.com/';
   private apiKey = '4sfcoyKKPW4OCzYwrID2o6G8mdOO2YWZ';
 
   constructor(private httpClient: HttpClient) {}
