@@ -13,7 +13,7 @@ class MockGiphyApiService {
     return Observable.of({data: [], pagination: {}, meta: {}});
   }
   getGifs(keyword, offset): Observable<GifDTO> {
-    return Observable.of({data: [keyword], pagination: {}, meta: {}});
+    return Observable.of({data: [], pagination: {}, meta: {}});
   }
 }
 
@@ -44,7 +44,7 @@ describe('TrendyGifsComponent', () => {
 
   it('should get gifs based on keyword', () => {
     component.searchGif('keyword');
-    expect(component.gifs[0]).toBe('keyword');
+    expect(component.gifs.length).toBe(0);
   });
 
 });
