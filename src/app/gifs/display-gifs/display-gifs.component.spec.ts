@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DisplayGifsComponent } from './display-gifs.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('DisplayGifsComponent', () => {
   let component: DisplayGifsComponent;
@@ -8,7 +9,8 @@ describe('DisplayGifsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DisplayGifsComponent ]
+      declarations: [ DisplayGifsComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

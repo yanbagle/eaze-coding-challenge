@@ -8,6 +8,7 @@ import { GifsComponent } from './gifs/gif.component';
 import {HttpClientModule} from '@angular/common/http';
 import {GiphyApiService} from './service/giphy-api.service';
 import { SearchGifsComponent } from './gifs/search-gifs/search-gifs.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SearchGifsComponent } from './gifs/search-gifs/search-gifs.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [GiphyApiService],
   bootstrap: [AppComponent]

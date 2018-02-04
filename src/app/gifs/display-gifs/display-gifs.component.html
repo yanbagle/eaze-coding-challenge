@@ -1,5 +1,6 @@
 <div class="container">
   <div class="gif" *ngFor="let gif of gifs">
-    <iframe (click)="gifPopup()" [src]="sanitizer.bypassSecurityTrustResourceUrl(gif.embed_url)" width="480" height="260" frameBorder="0" allowFullScreen></iframe>
+    <i [ngClass]="{'fas fa-spinner fa-spin': !loaded}"></i>
+    <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(gif.embed_url)" width="480" height="260" frameBorder="0" allowFullScreen></iframe>
   </div>
 </div>

@@ -16,10 +16,18 @@ export class GifsComponent implements OnInit {
 
   // when app launches, call api to get trendy gifs
   ngOnInit() {
-    this.giphyApiService.getTrendyGifs(5).subscribe((res) => {
+    this.giphyApiService.getTrendyGifs(0).subscribe((res) => {
       this.gifs = res.data;
     }, (error) => {
-      // handle error
+      console.log(error);
+    });
+  }
+
+  public searchGif (keyword) {
+    this.giphyApiService.getGifs(keyword, 0).subscribe((res) => {
+      this.gifs = res.data;
+    }, (error) => {
+      console.log(error);
     });
   }
 
