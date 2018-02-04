@@ -8,6 +8,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class SearchGifsComponent implements OnInit {
 
   @Output() keywordOutput: EventEmitter<any> = new EventEmitter();
+  @Output() loadMoreGifs: EventEmitter<any> = new EventEmitter();
+
   public userSearch: string;
 
   constructor() { }
@@ -17,6 +19,10 @@ export class SearchGifsComponent implements OnInit {
 
   public sendUserInput () {
     this.keywordOutput.emit(this.userSearch);
+  }
+
+  public loadMore () {
+    this.loadMoreGifs.emit(true);
   }
 
 }

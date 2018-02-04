@@ -1,5 +1,6 @@
 import {
-  AfterViewChecked, ApplicationRef, ChangeDetectorRef, Component, HostListener, Input, OnChanges, OnInit,
+  AfterViewChecked, ApplicationRef, ChangeDetectorRef, Component, EventEmitter, HostListener, Input, OnChanges, OnInit,
+  Output,
   SimpleChanges
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -15,6 +16,7 @@ export class DisplayGifsComponent implements OnInit, OnChanges {
 
   // gifs comes from gifs component
   @Input() gifs: Gif[];
+
   public loaded = true;
 
   constructor(public sanitizer: DomSanitizer) { }

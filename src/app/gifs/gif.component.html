@@ -3,5 +3,6 @@
   (keywordOutput)="searchGif($event)">
 </app-search-gifs>
 <app-display-gifs
-  [gifs]="gifs">
+  [gifs]="gifs"
+  (loadMoreGifs)="loadMoreGifs()">
 </app-display-gifs>
