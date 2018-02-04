@@ -6,7 +6,7 @@ import {GiphyApiService} from './giphy-api.service';
 
 describe('GiphyServiceApi', () => {
 
-  const url = 'http://api.giphy.com/';
+  const url = 'https://api.giphy.com/';
   const apiKey = '4sfcoyKKPW4OCzYwrID2o6G8mdOO2YWZ';
 
   beforeEach(async(() => {
