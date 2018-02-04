@@ -1,5 +1,8 @@
 # EazeCodingChallenge
 
+https://yanzhang000.github.io/eaze-coding-challenge/
+
+Run it locally
 1) npm install
 2) npm start -> http://localhost:4200/
 3) npm test to run the unit tests
