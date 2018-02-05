@@ -26,7 +26,7 @@ export class DisplayGifsComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.loaded = true;
-    }, 15000);
+    }, 2000);
   }
 
   // detecting when user is at bottom of page

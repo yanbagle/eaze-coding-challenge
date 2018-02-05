@@ -28,7 +28,7 @@ describe('GiphyServiceApi', () => {
       service.getTrendyGifs()
         .subscribe(data => expect(data).toEqual({data: [], pagination: {}, meta: {}}));
 
-      const thisUrl = `${url}v1/gifs/trending?api_key=${apiKey}`;
+      const thisUrl = `${url}v1/gifs/trending?api_key=${apiKey}&limit=6`;
       const req = httpMock.expectOne(thisUrl);
       expect(req.request.method).toEqual('GET');
       req.flush({data: [], pagination: {}, meta: {}});
@@ -43,7 +43,7 @@ describe('GiphyServiceApi', () => {
       service.getGifs('keyword', 0)
         .subscribe(data => expect(data).toEqual({data: [], pagination: {}, meta: {}}));
 
-      const thisUrl = `${url}v1/gifs/search?api_key=${apiKey}&q=keyword&offset=0`;
+      const thisUrl = `${url}v1/gifs/search?api_key=${apiKey}&q=keyword&offset=0&limit=6`;
       const req = httpMock.expectOne(thisUrl);
       expect(req.request.method).toEqual('GET');
       req.flush({data: [], pagination: {}, meta: {}});

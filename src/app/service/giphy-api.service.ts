@@ -13,12 +13,12 @@ export class GiphyApiService {
   constructor(private httpClient: HttpClient) {}
 
   getTrendyGifs(): Observable<GifDTO> {
-    const url = `${this.url}v1/gifs/trending?api_key=${this.apiKey}`;
+    const url = `${this.url}v1/gifs/trending?api_key=${this.apiKey}&limit=6`;
     return this.httpClient.get<GifDTO>(url);
   }
 
   getGifs(keyword, offset): Observable<GifDTO> {
-    const url = `${this.url}v1/gifs/search?api_key=${this.apiKey}&q=${keyword}&offset=${offset}`;
+    const url = `${this.url}v1/gifs/search?api_key=${this.apiKey}&q=${keyword}&offset=${offset}&limit=6`;
     return this.httpClient.get<GifDTO>(url);
   }
 
